@@ -1,0 +1,14 @@
+.app {
+  width: 150vw;
+  height: 150vw;
+}
+.container {
+  margin: 0 auto;
+  width: 70vw;
+  height: 150vw;
+}
+
+header {
+  height: 100px;
+  border-bottom: 1px solid lightgreen;
+}
