@@ -1,14 +1,133 @@
 .app {
-  width: 150vw;
-  height: 150vw;
+  font-family: "IBM Plex Sans", Helvetica, sans-serif;
+  max-width: 1900px;
 }
 .container {
   margin: 0 auto;
-  width: 70vw;
-  height: 150vw;
+  max-width: 1200px;
 }
 
 header {
-  height: 100px;
-  border-bottom: 1px solid lightgreen;
+  border-bottom: 1px solid lightgrey;
+}
+
+h1 {
+  font-family: "IBM Plex Sans";
+  color: #2e3333;
+  margin-top: 10px;
+  margin-bottom: 32px;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+h2 {
+  color: #2e3333;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  color: #2e3333;
+  font-size: 20px;
+}
+.test {
+  max-width: 1900px;
+  background-color: white;
+}
+.logo {
+  width: 155px;
+  margin: 10px 30px;
+}
+
+.restoDesritption {
+  font-size: 20px;
+  line-height: 27px;
+  color: #868a8a;
+  font-weight: 300;
+}
+.containerResto {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 30px 0;
+
+  display: flex;
+}
+.imageResto {
+  width: 350px;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+
+.description {
+  margin: 0 auto;
+  max-width: 1200px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerMenu {
+  max-width: 1900px;
+  background-color: #f3f5f5;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.menuContent {
+  max-width: 820px;
+}
+
+.panier {
+  max-width: 380px;
+}
+
+.plates {
+  width: 400px;
+  height: 160px;
+  background-color: #ffff;
+  border-radius: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.plateDescription {
+  width: 225px;
+  height: 36px;
+  overflow: hidden;
+  color: #808484;
+  font-size: 18px;
+  margin: 16px 0;
+}
+
+.price {
+  color: #808484;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.photoMeal {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.mealDescription {
+  flex: 2;
+}
+
+.meal-photos {
+  flex: 1;
+}
+
+.populaire {
+  color: #ff8000;
+  font-size: 15px;
+  font-weight: bold;
 }
