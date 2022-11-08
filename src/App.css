@@ -6,6 +6,13 @@
   margin: 0 auto;
   max-width: 1200px;
 }
+.restoTitle {
+  flex: 2;
+}
+
+.imagePresentation {
+  flex: 1;
+}
 
 header {
   border-bottom: 1px solid lightgrey;
@@ -54,7 +61,7 @@ h3 {
   display: flex;
 }
 .imageResto {
-  width: 350px;
+  max-width: 350px;
   margin-left: 30px;
   border-radius: 5px;
 }
@@ -96,6 +103,11 @@ h3 {
   display: flex;
 }
 
+.plates:hover {
+  box-shadow: 0 0 10px rgb(194, 189, 189);
+  cursor: pointer;
+}
+
 .plateDescription {
   width: 225px;
   height: 36px;
@@ -131,3 +143,15 @@ h3 {
   font-size: 15px;
   font-weight: bold;
 }
+
+.fa-star {
+  margin-left: 10px;
+}
+@media (max-width: 1205px) {
+  .container,
+  .containerMenu,
+  .containerResto {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+} ;
