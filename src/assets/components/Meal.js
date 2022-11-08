@@ -1,21 +1,43 @@
-const Meal = ({ meals, id }) => {
-  return (
-    <div className="plates" key={id}>
-      <div className="mealDescription">
-        <h3>{meals[id].title}</h3>
-        <p className="plateDescription">{meals[id].description}</p>
+const Meal = ({ meals, choice, setChoice, setCounter, counter }) => {
+  const handleClick = (title, price) => {
+    const newChoice = [...choice];
+    const obj = {
+      title: title,
+      price: price,
+      quantity: counter,
+    };
+    newChoice.push(obj);
+    // console.log(newChoice);
+    setChoice(newChoice);
+    setCounter(counter);
+    console(counter);
+  };
 
-        <span className="price">{meals[id].price} €</span>
-        {meals[id].popular ? (
+  return (
+    <div
+      className="plates"
+      onClick={() => {
+        handleClick(meals.title, meals.price);
+      }}
+    >
+      <p></p>
+      {/* {console.log(meals.title)} */}
+      {/* <div className="plates">
+        // {console.log(meals)} */}
+      <div className="mealDescription">
+        <h3>{meals.title}</h3>
+        <p className="plateDescription">{meals.description}</p>
+
+        <span className="price">{meals.price} €</span>
+        {meals.popular ? (
           <span className="populaire">
-            Populaire<i class="fa-solid fa-star"></i>
+            Populaire<i className="fa-solid fa-star"></i>
           </span>
         ) : null}
       </div>
-
-      {meals[id].picture ? (
+      {meals.picture ? (
         <div className="meal-photos">
-          <img className="photoMeal" src={meals[id].picture} alt="meal" />
+          <img className="photoMeal" src={meals.picture} alt="meal" />
         </div>
       ) : null}
     </div>

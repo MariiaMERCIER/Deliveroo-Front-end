@@ -12,6 +12,8 @@
 
 .imagePresentation {
   flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 header {
@@ -89,7 +91,29 @@ h3 {
 }
 
 .panier {
-  max-width: 380px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 350px;
+  background-color: white;
+  padding: 10px 10px 30px;
+  height: fit-content;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.validation {
+  width: 330px;
+  height: 50px;
+  font-size: 16px;
+  color: white;
+  background-color: #00cdbd;
+  border-radius: 5px;
+  border: none;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .plates {
@@ -146,6 +170,15 @@ h3 {
 
 .fa-star {
   margin-left: 10px;
+}
+
+.panierElement {
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter img {
+  width: 20px;
 }
 @media (max-width: 1205px) {
   .container,

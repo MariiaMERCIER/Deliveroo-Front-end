@@ -1,6 +1,6 @@
 import Menus from "./Menus";
 
-const Resto = ({ data }) => {
+const Resto = ({ data, choice, setChoice, counter, setCounter }) => {
   return (
     <main>
       <div className="restoContent">
@@ -18,7 +18,13 @@ const Resto = ({ data }) => {
           </div>
         </div>
       </div>
-      <Menus data={data} />
+      <Menus
+        counter={counter}
+        setCounter={setCounter}
+        data={data}
+        choice={choice}
+        setChoice={setChoice}
+      />
     </main>
   );
 };

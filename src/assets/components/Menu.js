@@ -1,14 +1,23 @@
 import Meal from "./Meal";
 
-const Menu = ({ data, index }) => {
+const Menu = ({ data, choice, setChoice, counter, setCounter }) => {
   return (
-    <div className="meal" key={index}>
-      {data.categories[index].meals.length !== 0 && (
+    <div className="meal">
+      {data.meals.length !== 0 && (
         <div>
-          <h2>{data.categories[index].name}</h2>
+          <h2>{data.name}</h2>
           <div className="menu">
-            {data.categories[index].meals.map((element, id) => {
-              return <Meal meals={data.categories[index].meals} id={id} />;
+            {data.meals.map((element, id) => {
+              return (
+                <Meal
+                  counter={counter}
+                  setCounter={setCounter}
+                  choice={choice}
+                  setChoice={setChoice}
+                  meals={data.meals[id]}
+                  key={id}
+                />
+              );
             })}
           </div>
         </div>
