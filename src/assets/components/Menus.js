@@ -6,7 +6,9 @@ const Menus = ({ data }) => {
     <div className="containerMenu">
       <div className="description">
         <div className="menuContent">
-          <Menu data={data} />
+          {data.categories.map((element, index) => {
+            return <Menu data={data} index={index} />;
+          })}
         </div>
         <Panier />
       </div>
