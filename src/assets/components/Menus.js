@@ -1,7 +1,7 @@
 import Panier from "./Panier";
 import Menu from "./Menu";
 
-const Menus = ({ data, choice, setChoice, counter, setCounter }) => {
+const Menus = ({ data, choice, setChoice }) => {
   return (
     <div className="containerMenu">
       <div className="description">
@@ -9,8 +9,6 @@ const Menus = ({ data, choice, setChoice, counter, setCounter }) => {
           {data.categories.map((element, index) => {
             return (
               <Menu
-                counter={counter}
-                setCounter={setCounter}
                 choice={choice}
                 setChoice={setChoice}
                 data={data.categories[index]}
@@ -19,12 +17,7 @@ const Menus = ({ data, choice, setChoice, counter, setCounter }) => {
             );
           })}
         </div>
-        <Panier
-          setCounter={setCounter}
-          counter={counter}
-          choice={choice}
-          getChoice={setChoice}
-        />
+        <Panier choice={choice} setChoice={setChoice} />
       </div>
     </div>
   );

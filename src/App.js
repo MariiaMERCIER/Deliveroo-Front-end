@@ -11,7 +11,6 @@ const App = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [choice, setChoice] = useState([]);
-  const [counter, setCounter] = useState(0);
 
   const fetchData = async () => {
     const response = await axios.get("http://localhost:3200/");
@@ -27,13 +26,7 @@ const App = () => {
   ) : (
     <div className="app">
       <Header Logo={Logo} />
-      <Resto
-        setCounter={setCounter}
-        counter={counter}
-        data={data}
-        choice={choice}
-        setChoice={setChoice}
-      />
+      <Resto data={data} choice={choice} setChoice={setChoice} />
     </div>
   );
 };

@@ -1,29 +1,31 @@
-const Meal = ({ meals, choice, setChoice, setCounter, counter }) => {
-  const handleClick = (title, price) => {
+const Meal = ({ meals, choice, setChoice, id }) => {
+  const handleClick = (title, price, id) => {
     const newChoice = [...choice];
-    const obj = {
-      title: title,
-      price: price,
-      quantity: counter,
-    };
-    newChoice.push(obj);
     // console.log(newChoice);
+    let mealPreseant = newChoice.find((elem) => elem.id === id);
+    // console.log(mealPreseant);
+    if (mealPreseant) {
+      mealPreseant.quantity = mealPreseant.quantity + 1;
+    } else {
+      const obj = {
+        title: title,
+        price: price,
+        quantity: 1,
+        id: id,
+      };
+      newChoice.push(obj);
+      // console.log(newChoice);
+    }
     setChoice(newChoice);
-    setCounter(counter);
-    console(counter);
   };
 
   return (
     <div
       className="plates"
       onClick={() => {
-        handleClick(meals.title, meals.price);
+        handleClick(meals.title, meals.price, meals.id);
       }}
     >
-      <p></p>
-      {/* {console.log(meals.title)} */}
-      {/* <div className="plates">
-        // {console.log(meals)} */}
       <div className="mealDescription">
         <h3>{meals.title}</h3>
         <p className="plateDescription">{meals.description}</p>

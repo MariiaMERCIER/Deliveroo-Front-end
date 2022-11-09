@@ -1,6 +1,6 @@
 import Meal from "./Meal";
 
-const Menu = ({ data, choice, setChoice, counter, setCounter }) => {
+const Menu = ({ data, choice, setChoice }) => {
   return (
     <div className="meal">
       {data.meals.length !== 0 && (
@@ -10,8 +10,6 @@ const Menu = ({ data, choice, setChoice, counter, setCounter }) => {
             {data.meals.map((element, id) => {
               return (
                 <Meal
-                  counter={counter}
-                  setCounter={setCounter}
                   choice={choice}
                   setChoice={setChoice}
                   meals={data.meals[id]}
