@@ -13,8 +13,8 @@ const Panier = ({ choice, setChoice }) => {
       <div className="with-sous-total">
         <div className="allElem">
           {choice.map((elem, num) => {
-            total = choice[num].quantity * choice[num].price;
-            // console.log(choice);
+            total = total + elem.quantity * elem.price;
+
             return (
               <div className="panierElement" key={num}>
                 <div className="counter">
@@ -33,7 +33,7 @@ const Panier = ({ choice, setChoice }) => {
                       }
                     }}
                   />
-                  <span className="quantity">{choice[num].quantity}</span>
+                  <span className="quantity">{elem.quantity}</span>
                   <img
                     className="plus"
                     src={Plus}
@@ -46,24 +46,27 @@ const Panier = ({ choice, setChoice }) => {
                   />
                 </div>
 
-                <span className="titleProduct">{choice[num].title}</span>
+                <span className="titleProduct">{elem.title}</span>
                 <span className="pricePanier">
-                  {(choice[num].price * choice[num].quantity).toFixed(2)} €
+                  {(elem.price * elem.quantity).toFixed(2)} €
                 </span>
               </div>
             );
           })}
         </div>
-        <div classname="sous-total">
-          <p>
+        <div className="sous-total">
+          <div>
             <span>Frais de livraison</span>
             <span>2.50€</span>
-          </p>
-          <p>
+          </div>
+          <div>
             <span>Sous-total</span>
-
             <span>{total.toFixed(2)} €</span>
-          </p>
+          </div>
+        </div>
+        <div className="total">
+          <span>Total</span>
+          <span>{(2.5 + Number(total.toFixed(2))).toFixed(2)} €</span>
         </div>
       </div>
     </div>

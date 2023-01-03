@@ -12,15 +12,19 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [choice, setChoice] = useState([]);
 
-  const fetchData = async () => {
-    const response = await axios.get("http://localhost:3200/");
-    setData(response.data);
-    setIsLoading(false);
-  };
-
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:3200/");
+        setData(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
     fetchData();
   }, []);
+
   return isLoading ? (
     <Chargement Logo={Logo} />
   ) : (
