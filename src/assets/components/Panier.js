@@ -4,11 +4,12 @@ import Moins from "../images/moins.png";
 const Panier = ({ choice, setChoice }) => {
   let total = 0;
   return choice.length === 0 ? (
-    <div className="panier vide">
+    <div className="panier vide hidden">
+      <button className="validation">Valider mon panier</button>
       <span>Panier vide</span>
     </div>
   ) : (
-    <div className="panier">
+    <div className="panier hidden">
       <button className="validation">Valider mon panier</button>
       <div className="with-sous-total">
         <div className="allElem">

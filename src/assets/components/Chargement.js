@@ -7,7 +7,7 @@ const Chargement = ({ Logo }) => {
         </div>
       </header>
       <main>
-        <div className="container">
+        <div className="container loading">
           <span>En cours de chargement...</span>
         </div>
       </main>

@@ -14,7 +14,6 @@ const Meal = ({ meals, choice, setChoice, id }) => {
         id: id,
       };
       newChoice.push(obj);
-      // console.log(newChoice);
     }
     setChoice(newChoice);
   };
