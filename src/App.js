@@ -15,7 +15,9 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3200/");
+        const response = await axios.get(
+          "https://site--deliveroo-backend--h9xmd52lw246.code.run/"
+        );
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
